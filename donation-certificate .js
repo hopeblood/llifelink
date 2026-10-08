@@ -1,95 +1,133 @@
-// ===============================
-// LIFELINK - DONATION CERTIFICATE
-// ===============================
+<!DOCTYPE html>
+<html lang="en">
 
-document.addEventListener("DOMContentLoaded", function () {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    // Get logged-in user
-    const user = JSON.parse(
-        localStorage.getItem("lifeLinkUser") || "null"
-    );
+    <title>LifeLink - Blood Donation Certificate</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    // ===============================
-    // CHECK LOGIN
-    // ===============================
+<body>
 
-    if (!user) {
+    <div class="certificate-page">
 
-        alert("Please login first.");
+        <div class="certificate">
 
-        window.location.href = "index.html";
+            <div class="certificate-border">
 
-        return;
-    }
+                <div class="certificate-logo">
+                    🩸
+                </div>
 
+                <h1 class="life-title">
+                    LifeLink
+                </h1>
 
-    // ===============================
-    // CHECK DONOR
-    // ===============================
+                <p class="college-title">
+                    Alamuri Ratnamal Institute of Engineering
+                    and Technology (ARMIET)
+                </p>
 
-    if (
-        user.userType &&
-        user.userType.toString().toLowerCase() !== "donor"
-    ) {
+                <div class="certificate-line"></div>
 
-        alert("Donation certificate is available for blood donors only.");
+                <h2>
+                    CERTIFICATE OF APPRECIATION
+                </h2>
 
-        window.location.href = "profile.html";
+                <p class="presented">
+                    This certificate is proudly presented to
+                </p>
 
-        return;
-    }
+                <h1 id="donorName">
+                    Donor Name
+                </h1>
 
-
-    // ===============================
-    // DISPLAY DONOR NAME
-    // ===============================
-
-    const donorName = document.getElementById("donorName");
-
-    if (donorName) {
-        donorName.textContent = user.name || "Donor Name";
-    }
-
-
-    // ===============================
-    // DISPLAY BLOOD GROUP
-    // ===============================
-
-    const bloodGroup = document.getElementById("bloodGroup");
-
-    if (bloodGroup) {
-        bloodGroup.textContent = user.bloodGroup || "-";
-    }
+                <p class="certificate-text">
+                    for voluntarily donating blood and making a
+                    valuable contribution towards saving lives.
+                </p>
 
 
-    // ===============================
-    // DISPLAY LOCATION
-    // ===============================
+                <div class="donation-details">
 
-    const location = document.getElementById("location");
+                    <div>
+                        <strong>Blood Group</strong>
+                        <span id="bloodGroup">-</span>
+                    </div>
 
-    if (location) {
-        location.textContent = user.location || "-";
-    }
+                    <div>
+                        <strong>Donation Date</strong>
+                        <span id="donationDate">-</span>
+                    </div>
+
+                    <div>
+                        <strong>Donation Location</strong>
+                        <span id="location">-</span>
+                    </div>
+
+                </div>
 
 
-    // ===============================
-    // DONATION DATE
-    // ===============================
+                <p class="message">
 
-    const donationDate = document.getElementById("donationDate");
+                    Your selfless contribution is a valuable
+                    act of humanity. Thank you for becoming a
+                    part of the LifeLink community.
 
-    const today = new Date();
+                </p>
 
-    const formattedDate = today.toLocaleDateString("en-IN", {
-        day: "2-digit",
-        month: "long",
-        year: "numeric"
-    });
 
-    if (donationDate) {
-        donationDate.textContent = formattedDate;
-    }
+                <h3 class="quote">
+                    “Your Blood Can Give Someone Another
+                    Chance at Life.”
+                </h3>
 
-});
+
+                <div class="certificate-signatures">
+
+                    <div>
+                        ____________________<br>
+                        <strong>Authorized Signature</strong>
+                    </div>
+
+                    <div>
+                        ____________________<br>
+                        <strong>LifeLink Coordinator</strong>
+                    </div>
+
+                </div>
+
+
+                <p class="certificate-footer">
+                    Connecting Donors. Saving Lives. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="print-certificate"
+            onclick="window.print()"
+        >
+            🖨️ Print / Save Certificate
+        </button>
+
+    </div>
+
+
+    <script src="donation-certificate.js"></script>
+    <img
+        src="certificate-signatures.png"
+        alt="Authorized Signature and LifeLink Coordinator Signature"
+        class="certificate-signature-image"
+    >
+</div>
+
+</body>
+
+</html>
