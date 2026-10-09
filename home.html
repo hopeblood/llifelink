@@ -1,516 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeLink - Home</title>
-
     <link rel="stylesheet" href="style.css">
 
-</head>
+    <style>
+        .college-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto;
+        }
 
+        .college-logo img {
+            width: 180px;
+            max-width: 80%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-college-logo {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .welcome-section .campus-title {
+            font-size: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-college-logo {
+                width: 75px;
+            }
+
+            .college-logo img {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
 
 <body>
 
-
-    <!-- =========================
-         NAVIGATION BAR
-    ========================== -->
-
+    <!-- NAVIGATION BAR -->
     <nav class="navbar">
-
-
-        <!-- Logo -->
 
         <div class="nav-logo">
             🩸 LifeLink
         </div>
 
-
-        <!-- College Name -->
-
-        <div class="college-name">
-
-            Alamuri Ratnamal Institute of Engineering
-            and Technology
-
-            <br>
-
-            (ARMIET)
-
-        </div>
-
-
-        <!-- Navigation Links -->
-
         <div class="nav-links">
-
-            <a href="home.html">
-                Home
-            </a>
-
-            <a href="find-donor.html">
-                Find Donor
-            </a>
-
-            <a href="request-blood.html">
-                Request Blood
-            </a>
-
-            <a href="emergency.html">
-                Emergency
-            </a>
-
-            <a href="requests.html">
-                My Requests
-            </a>
-
-            <a href="profile.html">
-                My Profile
-            </a>
-
+            <a href="home.html">Home</a>
+            <a href="find-donor.html">Find Donor</a>
+            <a href="request-blood.html">Request Blood</a>
+            <a href="emergency.html">Emergency</a>
+            <a href="requests.html">My Requests</a>
+            <a href="profile.html">My Profile</a>
         </div>
 
-
-        <!-- Logout -->
-
-        <button
-            class="logout-btn"
-            onclick="logout()">
-
+        <button class="logout-btn" onclick="logout()">
             Logout
-
         </button>
-
     </nav>
 
-
-
-    <!-- =========================
-         WELCOME SECTION
-    ========================== -->
-
+    <!-- WELCOME SECTION -->
     <section class="welcome-section">
 
-
         <div>
-
-
-            <p class="small-title">
-                WELCOME TO LIFELINK
-            </p>
-
+            <p class="small-title">WELCOME TO LIFELINK</p>
 
             <h1 class="campus-title">
-
                 Smart Campus Blood Donor &
                 Emergency Response System
-
             </h1>
-
 
             <h1>
-
                 Connecting Donors.
                 <br>
-
-                <span>
-                    Saving Lives.
-                </span>
-
+                <span>Saving Lives.</span>
             </h1>
 
-
             <p>
-
                 Find blood donors, request blood and
                 help people during emergencies —
                 all in one place.
-
             </p>
 
-
-            <!-- Buttons -->
-
             <div class="welcome-buttons">
-
-
-                <a
-                    href="find-donor.html"
-                    class="main-btn">
-
+                <a href="find-donor.html" class="main-btn">
                     🩸 Find a Donor
-
                 </a>
 
-
-                <a
-                    href="emergency.html"
-                    class="emergency-btn">
-
+                <a href="emergency.html" class="emergency-btn">
                     🚨 Emergency
-
                 </a>
-
             </div>
-
-
         </div>
 
-
-        <!-- Blood Icon -->
-
-        <div class="blood-image">
-
-            🩸
-
-        </div>
-
-
+        <div class="blood-image">🩸</div>
     </section>
 
+    <!-- COLLEGE LOGO -->
+    <section class="college-section">
+        <div class="college-logo">
+            <img
+                src="armiet-logo.png"
+                alt="ARMIET College Logo"
+            >
+        </div>
 
+        <h2>🏫 Academic Project</h2>
 
-    <!-- =========================
-         QUICK OPTIONS
-    ========================== -->
+        <p>
+            <strong>LifeLink</strong> is a Smart Campus Blood Donor &
+            Emergency Response System developed at ARMIET.
+        </p>
+    </section>
 
+    <!-- QUICK OPTIONS -->
     <section class="options-section">
 
-
-        <h2>
-            What do you need?
-        </h2>
-
-
-        <p class="section-subtitle">
-
-            Choose an option to continue
-
-        </p>
-
-
+        <h2>What do you need?</h2>
+        <p class="section-subtitle">Choose an option to continue</p>
 
         <div class="cards">
 
-
-            <!-- FIND DONOR -->
-
-            <a
-                href="find-donor.html"
-                class="card">
-
-
-                <div class="card-icon">
-                    🔍
-                </div>
-
-
-                <h3>
-                    Find Donor
-                </h3>
-
-
-                <p>
-
-                    Search for blood donors
-                    by blood group and location.
-
-                </p>
-
-
+            <a href="find-donor.html" class="card">
+                <div class="card-icon">🔍</div>
+                <h3>Find Donor</h3>
+                <p>Search for blood donors by blood group and location.</p>
             </a>
 
-
-
-            <!-- REQUEST BLOOD -->
-
-            <a
-                href="request-blood.html"
-                class="card">
-
-
-                <div class="card-icon">
-                    🩸
-                </div>
-
-
-                <h3>
-                    Request Blood
-                </h3>
-
-
-                <p>
-
-                    Submit a blood request
-                    for yourself or someone in need.
-
-                </p>
-
-
+            <a href="request-blood.html" class="card">
+                <div class="card-icon">🩸</div>
+                <h3>Request Blood</h3>
+                <p>Submit a blood request for yourself or someone in need.</p>
             </a>
 
-
-
-            <!-- EMERGENCY -->
-
-            <a
-                href="emergency.html"
-                class="card emergency-card">
-
-
-                <div class="card-icon">
-                    🚨
-                </div>
-
-
-                <h3>
-                    Emergency
-                </h3>
-
-
-                <p>
-
-                    Send an urgent blood request
-                    during an emergency.
-
-                </p>
-
-
+            <a href="emergency.html" class="card emergency-card">
+                <div class="card-icon">🚨</div>
+                <h3>Emergency</h3>
+                <p>Send an urgent blood request during an emergency.</p>
             </a>
 
-
-
-            <!-- MY REQUESTS -->
-
-            <a
-                href="requests.html"
-                class="card">
-
-
-                <div class="card-icon">
-                    📋
-                </div>
-
-
-                <h3>
-                    My Requests
-                </h3>
-
-
-                <p>
-
-                    View and track your
-                    blood requests.
-
-                </p>
-
-
+            <a href="requests.html" class="card">
+                <div class="card-icon">📋</div>
+                <h3>My Requests</h3>
+                <p>View and track your blood requests.</p>
             </a>
 
-
-
-            <!-- MY PROFILE -->
-
-            <a
-                href="profile.html"
-                class="card">
-
-
-                <div class="card-icon">
-                    👤
-                </div>
-
-
-                <h3>
-                    My Profile
-                </h3>
-
-
-                <p>
-
-                    View and manage your
-                    LifeLink account details.
-
-                </p>
-
-
+            <a href="profile.html" class="card">
+                <div class="card-icon">👤</div>
+                <h3>My Profile</h3>
+                <p>View and manage your LifeLink account details.</p>
             </a>
-
 
         </div>
-
     </section>
 
-
-
-    <!-- =========================
-         HOW LIFELINK WORKS
-    ========================== -->
-
+    <!-- HOW LIFELINK WORKS -->
     <section class="how-section">
 
-
-        <h2>
-            How LifeLink Works
-        </h2>
-
+        <h2>How LifeLink Works</h2>
 
         <div class="steps">
 
-
-            <!-- STEP 1 -->
-
             <div class="step">
-
-
-                <div>
-                    1
-                </div>
-
-
-                <h3>
-                    Register
-                </h3>
-
-
-                <p>
-
-                    Create your LifeLink
-                    account.
-
-                </p>
-
-
-            </div>
-            <!-- STEP 2 -->
-
-            <div class="step">
-
-                <div>
-                    2
-                </div>
-
-                <h3>
-                    Find or Request
-                </h3>
-
-                <p>
-                    Find a donor or request blood
-                    when needed.
-                </p>
-
+                <div>1</div>
+                <h3>Register</h3>
+                <p>Create your LifeLink account.</p>
             </div>
 
-
-            <!-- STEP 3 -->
-
             <div class="step">
-
-                <div>
-                    3
-                </div>
-
-                <h3>
-                    Connect
-                </h3>
-
-                <p>
-                    Connect with people
-                    who can help.
-                </p>
-
+                <div>2</div>
+                <h3>Find or Request</h3>
+                <p>Find a donor or request blood when needed.</p>
             </div>
 
-
-            <!-- STEP 4 -->
+            <div class="step">
+                <div>3</div>
+                <h3>Connect</h3>
+                <p>Connect with people who can help.</p>
+            </div>
 
             <div class="step">
-
-                <div>
-                    4
-                </div>
-
-                <h3>
-                    Save a Life
-                </h3>
-
-                <p>
-                    Every donation can
-                    make a difference.
-                </p>
-
+                <div>4</div>
+                <h3>Save a Life</h3>
+                <p>Every donation can make a difference.</p>
             </div>
 
         </div>
-
     </section>
 
-
-
-    <!-- =========================
-         COLLEGE SECTION
-    ========================== -->
-
-    <section class="college-section">
-
-        <h2>
-            🏫 Academic Project
-        </h2>
-
-        <p>
-            <strong>LifeLink</strong>
-            is a Smart Campus Blood Donor &
-            Emergency Response System developed at
-        </p>
-
-        <h3>
-            Alamuri Ratnamal Institute of Engineering
-            and Technology
-            <br>
-            (ARMIET)
-        </h3>
-
-    </section>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer>
-
         <p>
-            🩸 <strong>LifeLink</strong>
-            — Connecting Donors. Saving Lives.
+            🩸 <strong>LifeLink</strong> —
+            Connecting Donors. Saving Lives.
         </p>
 
-        <p>
-            Alamuri Ratnamal Institute of Engineering
-            and Technology (ARMIET)
-        </p>
+        <div class="college-logo">
+            <img
+                src="armiet-logo.png"
+                alt="ARMIET College Logo"
+            >
+        </div>
 
-        <p>
-            © 2026 LifeLink. All Rights Reserved.
-        </p>
-
+        <p>© 2026 LifeLink. All Rights Reserved.</p>
     </footer>
 
-
-
     <!-- JavaScript -->
-
     <script src="script.js"></script>
 
 </body>
-
 </html>
-
-
-            
